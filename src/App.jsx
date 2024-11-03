@@ -1,8 +1,9 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 import { Footer, Navbar } from './components';
-import { Contact, Home } from './pages';
+import { About, Contact, Home } from './pages';
 import { Globals } from '@react-spring/web';
+import Projects from './pages/Project';
 
 // Đặt frameLoop thành 'demand' để cho phép điều khiển thủ công
 Globals.assign({ frameLoop: 'demand' });
@@ -19,8 +20,8 @@ const App = () => {
             element={
               <>
                 <Routes>
-                  {/* <Route path="/about" element={<About />} />
-                  <Route path="/projects" element={<Projects />} /> */}
+                  <Route path="/about" element={<About />} />
+                  <Route path="/projects" element={<Projects />} />
                   <Route path="/contact" element={<Contact />} />
                 </Routes>
                 <Footer />
